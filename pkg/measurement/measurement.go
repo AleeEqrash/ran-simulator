@@ -11,6 +11,7 @@ import (
 	"github.com/onosproject/ran-simulator/pkg/store/cells"
 	"github.com/onosproject/ran-simulator/pkg/store/ues"
 	"github.com/onosproject/rrm-son-lib/pkg/model/device"
+	"fmt"
 )
 
 var logMeasCtrl = logging.GetLogger("measurement", "controller")
@@ -25,6 +26,10 @@ func NewMeasController(measType MeasEventType, cellStore cells.Store, ueStore ue
 		outputChan: make(chan device.UE),
 	}
 }
+
+var global int
+global = 10
+fmt.println(global)
 
 // MeasController is an abstraction of the measurement controller
 type MeasController interface {
